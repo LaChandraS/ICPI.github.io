@@ -27,10 +27,13 @@ top: -70px;
 
 .hexmap{
   padding: 30px;
+  width: 1198px;
+  height: 906px;
   position: relative;
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  resize: both;
 }
 
 .hexagon {
