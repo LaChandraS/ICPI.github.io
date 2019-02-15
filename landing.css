@@ -1,0 +1,117 @@
+.hexer {
+stroke-dasharray: 1920;
+stroke-dashoffset: 1920;
+animation: dash 3s linear forwards;
+}
+
+@keyframes dash {
+to {
+  stroke-dashoffset: 0;
+}
+}
+
+p{
+  font-size: 30px;
+}
+
+svg {
+position: absolute;
+top: -70px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hexmap{
+  padding: 30px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hexagon {
+  position: relative;
+  width: 320px;
+  height: 184px;
+  background-color: rgb(149 179 215);
+  margin: 74px -12px 20px 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hexagon.invis{
+  cursor: default;
+  background-color: transparent;
+}
+.hexagon.invis:hover{
+  opactiy: 0;
+  background-color: transparent;
+}
+
+.hexagon.invis:before, .hexagon.invis:after{
+  border-bottom: 92px solid rgba(0,0,0,0);
+  border-top: 92px solid rgba(0,0,0,0);
+}
+
+.hexagon.invis:hover:before, .hexagon.invis:hover:after{
+  border-bottom: 92px solid rgba(0,0,0,0);
+  border-top: 92px solid rgba(0,0,0,0);
+}
+
+.hexagon p{
+  position: absolute;
+  color: rgba(0,0,0,0);
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.hexagon:hover p{
+  color: #fff;
+}
+
+.hexagon:hover:before{
+  border-bottom-color: rgba(0,0,0,.85);
+}
+.hexagon:hover:after{
+  border-top-color: rgba(0,0,0,.85);
+}
+
+
+.hexagon:hover{
+  background-color: rgba(0,0,0,.85);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 92px solid rgb(149 179 215);
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 92px solid rgb(149 179 215);
+}
+
+.hexrow{
+  display:block;
+  position:relative;
+  float: none;
+  margin: 0;
+}
+
+.hexrow.other{
+  margin-left: 164px;
+}
