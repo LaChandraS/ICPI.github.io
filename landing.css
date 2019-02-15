@@ -1,3 +1,4 @@
+
 .hexer {
 stroke-dasharray: 1920;
 stroke-dashoffset: 1920;
@@ -11,18 +12,20 @@ to {
 }
 
 p{
-  font-size: 30px;
+  font-size: 18px;
 }
 
 svg {
 position: absolute;
-top: -70px;
+top: -40px;
 
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-size: 100%;
+    font-family: Calibri, sans-serif;
 }
 
 .hexmap{
@@ -31,17 +34,17 @@ top: -70px;
   height: 906px;
   position: relative;
   display: inline-block;
-  left: 50%;
+  left: 80%;
   transform: translateX(-50%);
   resize: both;
 }
 
 .hexagon {
   position: relative;
-  width: 320px;
-  height: 184px;
+  width: 160px;
+  height: 92px;
   background-color: rgb(149 179 215);
-  margin: 74px -12px 20px 14px;
+  margin: 28px -12px 20px 14px;
   display: inline-block;
   cursor: pointer;
 }
@@ -51,18 +54,18 @@ top: -70px;
   background-color: transparent;
 }
 .hexagon.invis:hover{
-  opactiy: 0;
+  opacity: : 0;
   background-color: transparent;
 }
 
 .hexagon.invis:before, .hexagon.invis:after{
-  border-bottom: 92px solid rgba(0,0,0,0);
-  border-top: 92px solid rgba(0,0,0,0);
+  border-bottom: 46px solid rgba(0,0,0,0);
+  border-top: 46px solid rgba(0,0,0,0);
 }
 
 .hexagon.invis:hover:before, .hexagon.invis:hover:after{
-  border-bottom: 92px solid rgba(0,0,0,0);
-  border-top: 92px solid rgba(0,0,0,0);
+  border-bottom: 46px solid rgba(0,0,0,0);
+  border-top: 46px solid rgba(0,0,0,0);
 }
 
 .hexagon p{
@@ -93,19 +96,19 @@ top: -70px;
   content: "";
   position: absolute;
   width: 0;
-  border-left: 160px solid transparent;
-  border-right: 160px solid transparent;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
 }
 
 .hexagon:before {
   bottom: 100%;
-  border-bottom: 92px solid rgb(149 179 215);
+  border-bottom: 46px solid rgb(149 179 215);
 }
 
 .hexagon:after {
   top: 100%;
   width: 0;
-  border-top: 92px solid rgb(149 179 215);
+  border-top: 46px solid rgb(149 179 215);
 }
 
 .hexrow{
@@ -116,5 +119,5 @@ top: -70px;
 }
 
 .hexrow.other{
-  margin-left: 164px;
+  margin-left: 82px;
 }
