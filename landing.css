@@ -1,6 +1,10 @@
 /*****************FRONT*****************/
 p{
-  font-size: 32px;
+  font-size: 28px;
+}
+
+h1{
+  font-size: 28px;
 }
 
 body{
@@ -119,15 +123,16 @@ to {
   border-top: 69px solid rgba(0,0,0,0);
 }
 
-.hexagon p{
+.hexagon h1{
   position: absolute;
-  color: rgba(0,0,0,0);
+  color: #fff;
+  visibility: visible;
   left: 50%;
   transform: translateX(-50%)
 }
 
-.hexagon:hover p{
-  color: #fff;
+.hexagon:hover h1{
+  color: transparent;
 }
 
 .hexagon:hover:before{
@@ -171,36 +176,4 @@ to {
 
 .hexrow.other{
   margin-left: 123px;
-}
-
-/*** HOVER EFFECT  **********************************************************************/
-.textanim-title {
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  transition: 0.5s;
-}
-
-.textanim-container:hover .textanim-title {
-  top: 10px;
-  transform: translateY(0);
-}
-
-.textanim-hidden {
-  position: absolute;
-  top: 400px;
-  opacity: 0.5;
-  transition: 0.8s;
-  text-align: center;
-}
-
-.textanim-container:hover .textanim-hidden {
-  top: 50%;
-  transform: translateY(-50%);
-}
 }
