@@ -126,7 +126,6 @@ to {
 .hexagon h1{
   position: absolute;
   color: #fff;
-  visibility: visible;
   left: 50%;
   transform: translateX(-50%)
 }
