@@ -125,7 +125,7 @@ to {
   grid-column-end: 3;
   display: inline-block;
   /* left: 80%; */
-  transform: translateX(-10%);
+  transform: translateX(-7%);
   resize: both;
 }
 
