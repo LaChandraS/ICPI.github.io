@@ -7,6 +7,13 @@
   margin-bottom: 25px;
 }
 
+.textonly {
+font-size: 113px;
+font-weight: normal;
+font-family: 'Roboto', sans-serif;
+text-align: justify;
+}
+
 /*****************FRONT*****************/
 p{
   font-size: 28px;
@@ -27,16 +34,20 @@ top: -55px;
 font-size: 32px;
 }
 
+svg#Layer_1{
+  overflow: visible;
+}
+
 * {
     padding: 0;
     font-size: 100%;
-    font-family: Calibri, sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 /*****************GRID*****************/
 .grid-container {
   display: grid;
-  grid-template-columns:290px 900px 200px 200px;
+  grid-template-columns:290px 870px 200px 200px;
   grid-template-rows:auto auto auto auto 100px;
   grid-gap: 5px;
   padding-top: 100px;
@@ -124,7 +135,6 @@ to {
   grid-column-start: 2;
   grid-column-end: 3;
   display: inline-block;
-  /* left: 80%; */
   transform: translateX(-7%);
   resize: both;
 }
