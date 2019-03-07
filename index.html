@@ -194,6 +194,13 @@
           document.getElementById("4").innerHTML = "Treatment Cluster";
           document.getElementById("5").innerHTML = "HIV/TB Diagnosis Cluster";
           document.getElementById("6").innerHTML = "HIV Prevention Cluster";
+          document.getElementById("home").addEventListener("click", changeReset);
+          document.getElementById("11").addEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").addEventListener("click", changeCoordCluster);
+          document.getElementById("33").addEventListener("click", changeHSSCluster);
+          document.getElementById("44").addEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").addEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").addEventListener("click", changeHIVPrevCluster);
         }
 
         function changeDataStreamCluster(){
@@ -203,6 +210,12 @@
           document.getElementById("4").innerHTML = "MER";
           document.getElementById("5").innerHTML = "Research and Evaluation";
           document.getElementById("6").innerHTML = "SIMS";
+          document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").removeEventListener("click", changeCoordCluster);
+          document.getElementById("33").removeEventListener("click", changeHSSCluster);
+          document.getElementById("44").removeEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").removeEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").removeEventListener("click", changeHIVPrevCluster);
         }
 
         function changeCoordCluster(){
@@ -212,6 +225,12 @@
           document.getElementById("4").innerHTML = "ICEE";
           document.getElementById("5").innerHTML = "ECT Liasons";
           document.getElementById("6").innerHTML = "";
+          document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").removeEventListener("click", changeCoordCluster);
+          document.getElementById("33").removeEventListener("click", changeHSSCluster);
+          document.getElementById("44").removeEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").removeEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").removeEventListener("click", changeHIVPrevCluster);
         }
 
         function changeTreatmentCluster(){
@@ -221,6 +240,12 @@
           document.getElementById("4").innerHTML = "Adolescents";
           document.getElementById("5").innerHTML = "";
           document.getElementById("6").innerHTML = "";
+          document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").removeEventListener("click", changeCoordCluster);
+          document.getElementById("33").removeEventListener("click", changeHSSCluster);
+          document.getElementById("44").removeEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").removeEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").removeEventListener("click", changeHIVPrevCluster);
         }
 
         function changeHSSCluster(){
@@ -230,6 +255,12 @@
           document.getElementById("4").innerHTML = "";
           document.getElementById("5").innerHTML = "";
           document.getElementById("6").innerHTML = "";
+          document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").removeEventListener("click", changeCoordCluster);
+          document.getElementById("33").removeEventListener("click", changeHSSCluster);
+          document.getElementById("44").removeEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").removeEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").removeEventListener("click", changeHIVPrevCluster);
         }
 
         function changeHIVTBCluster(){
@@ -239,6 +270,12 @@
           document.getElementById("4").innerHTML = "Lab (at site)";
           document.getElementById("5").innerHTML = "";
           document.getElementById("6").innerHTML = "";
+          document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").removeEventListener("click", changeCoordCluster);
+          document.getElementById("33").removeEventListener("click", changeHSSCluster);
+          document.getElementById("44").removeEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").removeEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").removeEventListener("click", changeHIVPrevCluster);
         }
 
         function changeHIVPrevCluster(){
@@ -248,6 +285,12 @@
           document.getElementById("4").innerHTML = "OVC";
           document.getElementById("5").innerHTML = "GBV";
           document.getElementById("6").innerHTML = "PEP/PrEP";
+          document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
+          document.getElementById("22").removeEventListener("click", changeCoordCluster);
+          document.getElementById("33").removeEventListener("click", changeHSSCluster);
+          document.getElementById("44").removeEventListener("click", changeTreatmentCluster);
+          document.getElementById("55").removeEventListener("click", changeHIVTBCluster);
+          document.getElementById("66").removeEventListener("click", changeHIVPrevCluster);
         }
       </script>
     </body>
