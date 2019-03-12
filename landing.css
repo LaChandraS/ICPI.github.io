@@ -5,7 +5,7 @@
   padding: 20px;
   text-align:center;
   margin-bottom: 25px;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .textonly {
@@ -64,7 +64,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 .item2 {
   grid-row: 2 / 3;
@@ -75,7 +75,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .item3 {
@@ -87,7 +87,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .item4 {
@@ -99,7 +99,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .item5 {
@@ -111,7 +111,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 .item6 {
   grid-row: span 3;
