@@ -1,22 +1,126 @@
 <html>
 <!DOCTYPE html>
 <meta charset="utf-8">
+<head>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<style>
 
-<!-- Load d3.js -->
-<script src="d3.min.js"></script>
-<!-- Add 2 buttons -->
-<button onclick="update('FY18Q1')">FY2018 Q1</button>
-<button onclick="update('FY18Q2')">FY2018 Q2</button>
+body {
+	padding-top: 25px;
+	margin: auto;
+	width: 650px;
+	font: 18px arial;
+}
 
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+</style>
+</head>
+
+<body>
+
+<b>Stats for Panorama and SharePoint usage</b>
+<svg id="chart" width="700" height="500"></svg>
+
+Select period:
+<select id="quarter"></select>
+
+<input type="radio" id="sort">
+Toggle sort
 
 <script>
 
-d3.csv("https://raw.githubusercontent.com/ICPI/ICPI.github.io/master/SharePoint_stats.csv").then(function(data) {
-  console.log(data[0]);
-});
+d3.csv("https://raw.githubusercontent.com/ICPI/ICPI.github.io/master/SharePoint_stats.csv")
+.then(d => chart(d));
+
+function chart(csv) {
+
+	var tool = [...new Set(csv.map(d => d.Tool))],
+		usecount  = [...new Set(csv.map(d => d.useage))];
+
+	var options = d3.select("#year").selectAll("option")
+		.data(years)
+	.enter().append("option")
+		.text(d => d)
+
+	var svg = d3.select("#chart"),
+		margin = {top: 25, bottom: 10, left: 25, right: 25},
+		width = +svg.attr("width") - margin.left - margin.right,
+		height = +svg.attr("height") - margin.top - margin.bottom;
+
+	var x = d3.scaleBand()
+		.range([margin.left, width - margin.right])
+		.padding(0.1)
+		.paddingOuter(0.2)
+
+	var y = d3.scaleLinear()
+		.range([height - margin.bottom, margin.top])
+
+	var xAxis = g => g
+		.attr("transform", "translate(0," + (height - margin.bottom) + ")")
+		.call(d3.axisBottom(x).tickSizeOuter(0))
+
+	var yAxis = g => g
+		.attr("transform", "translate(" + margin.left + ",0)")
+		.call(d3.axisLeft(y))
+
+	svg.append("g")
+		.attr("class", "x-axis")
+
+	svg.append("g")
+		.attr("class", "y-axis")
+
+	update(d3.select("#year").property("value"), 0)
+
+	function update(year, speed) {
+
+		var data = csv.filter(f => f.year == year)
+
+		y.domain([0, d3.max(data, d => d.value)]).nice()
+
+		svg.selectAll(".y-axis").transition().duration(speed)
+			.call(yAxis);
+
+		data.sort(d3.select("#sort").property("checked")
+			? (a, b) => b.value - a.value
+			: (a, b) => months.indexOf(a.month) - months.indexOf(b.month))
+
+		x.domain(data.map(d => d.month))
+
+		svg.selectAll(".x-axis").transition().duration(speed)
+			.call(xAxis)
+
+		var bar = svg.selectAll(".bar")
+			.data(data, d => d.month)
+
+		bar.exit().remove();
+
+		bar.enter().append("rect")
+			.attr("class", "bar")
+			.attr("fill", "steelblue")
+			.attr("width", x.bandwidth())
+			.merge(bar)
+		.transition().duration(speed)
+			.attr("x", d => x(d.month))
+			.attr("y", d => y(d.value))
+			.attr("height", d => y(0) - y(d.value))
+	}
+
+	chart.update = update;
+}
+
+var select = d3.select("#year")
+	.style("border-radius", "5px")
+	.on("change", function() {
+		chart.update(this.value, 750)
+	})
+
+var checkbox = d3.select("#sort")
+	.style("margin-left", "45%")
+	.on("click", function() {
+		chart.update(select.property("value"), 750)
+	})
 
 </script>
+</body>
 
 </html>
