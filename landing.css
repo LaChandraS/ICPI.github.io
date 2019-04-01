@@ -1,3 +1,29 @@
+.flip-vertical-left {
+	-webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes flip-vertical-left {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+  }
+}
+@keyframes flip-vertical-left {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+  }
+}
+
 .borderer{
   align-self: start;
   border-radius: 25px;
@@ -5,7 +31,7 @@
   padding: 20px;
   text-align:center;
   margin-bottom: 25px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px;
 }
 
 .textonly {
@@ -64,7 +90,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px;
 }
 .item2 {
   grid-row: 2 / 3;
@@ -75,7 +101,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px;
 }
 
 .item3 {
@@ -87,7 +113,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px;
 }
 
 .item4 {
@@ -99,7 +125,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px;
 }
 
 .item5 {
@@ -111,7 +137,7 @@ svg#Layer_1{
   border: 1px solid rgb(149 179 215);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px;
 }
 .item6 {
   grid-row: span 3;
