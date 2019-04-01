@@ -67,7 +67,7 @@
               <h1 id = "3">Health Systems Strengthening (HSS) Cluster</h1>
               <!-- </a> -->
             </div>
-          <div id = "home" class="hexagon mid invis">
+          <div id = "home" class="hexagon mid invis flip-vertical-left">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                  width="500" height="500" viewBox="0 0 1000 1000">
               <g transform="scale(0.75,-0.75) translate(-180,-830)">
@@ -204,12 +204,12 @@
         }
 
         function changeDataStreamCluster(){
-          document.getElementById("1").innerHTML = "External Data";
-          document.getElementById("2").innerHTML = "Financial Data";
-          document.getElementById("3").innerHTML = "Geospatial Data";
-          document.getElementById("4").innerHTML = "MER";
-          document.getElementById("5").innerHTML = "Research and Evaluation";
-          document.getElementById("6").innerHTML = "SIMS";
+          document.getElementById("1").innerHTML = '<font color="black">External Data</font>';
+          document.getElementById("2").innerHTML = '<font color="black">Financial Data</font>';
+          document.getElementById("3").innerHTML = '<font color="black">Geospatial Data</font>';
+          document.getElementById("4").innerHTML = '<font color="black">MER"</font>';
+          document.getElementById("5").innerHTML = '<font color="black">Research and Evaluation</font>';
+          document.getElementById("6").innerHTML = '<font color="black">SIMS</font>';
           document.getElementById("11").removeEventListener("click", changeDataStreamCluster);
           document.getElementById("22").removeEventListener("click", changeCoordCluster);
           document.getElementById("33").removeEventListener("click", changeHSSCluster);
