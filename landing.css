@@ -1,37 +1,11 @@
-.flip-vertical-left {
-	-webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-
-@-webkit-keyframes flip-vertical-left {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(-360deg);
-            transform: rotateY(-360deg);
-  }
-}
-@keyframes flip-vertical-left {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(-360deg);
-            transform: rotateY(-360deg);
-  }
-}
-
 .borderer{
   align-self: start;
   border-radius: 25px;
-  border: 1px solid rgb(149 179 215);
+  border: 1px solid rgb(0 0 0);
   padding: 20px;
   text-align:center;
   margin-bottom: 25px;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .textonly {
@@ -50,10 +24,10 @@ h1{
   font-size: 25px;
 }
 
-/* body{
+body{
   background-image: url("trianglify.png");
   background-size:cover
-} */
+}
 
 svg {
 position: absolute;
@@ -74,10 +48,10 @@ svg#Layer_1{
 /*****************GRID*****************/
 .grid-container {
   display: grid;
-  grid-template-columns:290px 870px 200px 200px;
+  grid-template-columns:290px 700px 200px 200px;
   grid-template-rows:auto auto auto auto 100px;
-  grid-gap: 15px;
-  padding-top: 100px;
+  grid-gap: 20px;
+  padding-top: 10px;
   padding-left: 10px;
 }
 
@@ -87,10 +61,10 @@ svg#Layer_1{
   grid-column-end: 2;
   display: inline;
   border-radius: 25px;
-  border: 1px solid rgb(149 179 215);
+  border: 1px solid rgb(0 0 0);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 .item2 {
   grid-row: 2 / 3;
@@ -98,10 +72,10 @@ svg#Layer_1{
   grid-column-end: 2;
   display: inline;
   border-radius: 25px;
-  border: 1px solid rgb(149 179 215);
+  border: 1px solid rgb(0 0 0);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .item3 {
@@ -110,10 +84,10 @@ svg#Layer_1{
   grid-column-end: 2;
   display: inline;
   border-radius: 25px;
-  border: 1px solid rgb(149 179 215);
+  border: 1px solid rgb(0 0 0);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .item4 {
@@ -122,10 +96,10 @@ svg#Layer_1{
   grid-column-end: 2;
   display: inline;
   border-radius: 25px;
-  border: 1px solid rgb(149 179 215);
+  border: 1px solid rgb(0 0 0);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 
 .item5 {
@@ -134,10 +108,10 @@ svg#Layer_1{
   display: inline;
   align-self: start;
   border-radius: 25px;
-  border: 1px solid rgb(149 179 215);
+  border: 1px solid rgb(0 0 0);
   padding: 20px;
   text-align:center;
-  box-shadow: 5px 10px;
+  box-shadow: 5px 10px #888888;
 }
 .item6 {
   grid-row: span 3;
@@ -145,7 +119,7 @@ svg#Layer_1{
   grid-column-end: 4;
   display: inline;
   align-self: start;
-  text-align:center;
+  text-align:center
 }
 
 /*****************LOGO*****************/
