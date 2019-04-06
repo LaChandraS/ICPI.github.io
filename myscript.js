@@ -54,12 +54,6 @@ for(i = 0; i < hexaname.length; i++)
    hexaname.item(i).setAttribute("id", i);
 }
 
-//remove extra blocks
-document.getElementById("0").remove();
-document.getElementById("6").remove();
-
-
-
 //add text
 var titles = [
       "",
@@ -77,18 +71,20 @@ var titles = [
 svg.append("text")
 .each(function(d) {
   var text = d3.select(this);
-  holder = [1,2,3,5,7,8];
-        for (var i = 0; i < holder.length; i++){
+        for (var i = 0; i < titles.length; i++){
           text.append("tspan")
           .style("font-size", "15px")
           .style("text-anchor", "middle")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-          .attr('x', points[holder[i]][0])
-          .attr('y', points[holder[i]][1])
+          .attr('x', points[i][0])
+          .attr('y', points[i][1])
           .attr("stroke","black")
-          .attr("xlink:href",'#' + holder[i])
-          .text(titles[holder[i]]);
+          .attr("xlink:href",'#' + [i])
+          .text(titles[i]);
         }
 });
+
+document.getElementById("0").remove();
+document.getElementById("6").remove();
