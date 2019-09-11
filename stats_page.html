@@ -23,7 +23,7 @@
 	<div id="chart"></div>
 	<script>
 		queue() 
-			.defer(d3.json, "occ.json")
+			.defer(d3.json, "shrpoint.json")
 			.await(drawAll);
 			
 		function drawAll(error, dataset) {
