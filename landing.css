@@ -1,6 +1,14 @@
-/*.flip-vertical-left {
+.flip-vertical-left {
 	-webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	        animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+a {
+  color: white;
+ text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @-webkit-keyframes flip-vertical-left {
@@ -22,7 +30,7 @@
     -webkit-transform: rotateY(-360deg);
             transform: rotateY(-360deg);
   }
-} */
+}
 
 .borderer{
   align-self: start;
@@ -39,6 +47,13 @@ font-size: 113px;
 font-weight: normal;
 font-family: 'Roboto', sans-serif;
 text-align: justify;
+}
+
+
+
+.textonly:hover {
+
+ text-decoration: underline;
 }
 
 /*****************FRONT*****************/
@@ -208,7 +223,28 @@ to {
   transform: translateX(-50%)
 }
 
-/* .hexagon:hover h1{
+
+
+.hexagon:hover h1{
+ text-decoration: underline;
+}
+
+.hexagon:hover {
+ opacity: 0.8;
+      filter: alpha(opacity=30);
+}
+
+.hexagon.mid:hover {
+ 
+ opacity: 0.3;
+ filter: alpha(opacity=30);
+      
+}
+
+
+
+
+ /* .hexagon:hover h1{
   color: transparent;
   opacity: : 0;
   background-color: transparent;
